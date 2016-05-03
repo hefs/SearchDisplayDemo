@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42B698171CBF84C0001527CA /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B698161CBF84C0001527CA /* CityModel.m */; };
+		42E165531CCA19CF0084EABB /* ChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E165521CCA19CF0084EABB /* ChineseToPinyin.m */; };
 		42E480D31CA8C8CC00421231 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E480D21CA8C8CC00421231 /* main.m */; };
 		42E480D61CA8C8CC00421231 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E480D51CA8C8CC00421231 /* AppDelegate.m */; };
 		42E480D91CA8C8CC00421231 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E480D81CA8C8CC00421231 /* ViewController.m */; };
@@ -47,6 +48,8 @@
 		427535E71CAA614D001CFD88 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		42B698151CBF84C0001527CA /* CityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityModel.h; sourceTree = "<group>"; };
 		42B698161CBF84C0001527CA /* CityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityModel.m; sourceTree = "<group>"; };
+		42E165511CCA19CF0084EABB /* ChineseToPinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyin.h; sourceTree = "<group>"; };
+		42E165521CCA19CF0084EABB /* ChineseToPinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyin.m; sourceTree = "<group>"; };
 		42E480CE1CA8C8CC00421231 /* PageControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E480D21CA8C8CC00421231 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		42E480D41CA8C8CC00421231 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 				42E480FC1CA9036B00421231 /* HoriThirdViewController.h */,
 				42E480FD1CA9036B00421231 /* HoriThirdViewController.m */,
 				42E480FE1CA9036B00421231 /* HoriThirdViewController.xib */,
+				42E165511CCA19CF0084EABB /* ChineseToPinyin.h */,
+				42E165521CCA19CF0084EABB /* ChineseToPinyin.m */,
 				42E480DA1CA8C8CC00421231 /* Main.storyboard */,
 				42E480DD1CA8C8CC00421231 /* Assets.xcassets */,
 				42E480DF1CA8C8CC00421231 /* LaunchScreen.storyboard */,
@@ -263,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42E480FF1CA9036B00421231 /* HoriThirdViewController.m in Sources */,
+				42E165531CCA19CF0084EABB /* ChineseToPinyin.m in Sources */,
 				42B698171CBF84C0001527CA /* CityModel.m in Sources */,
 				42E480FA1CA9035A00421231 /* HoriSecondViewController.m in Sources */,
 				42E480D91CA8C8CC00421231 /* ViewController.m in Sources */,

@@ -7,13 +7,23 @@
 //
 
 #import "HoriThirdViewController.h"
+#import "ChineseToPinyin.h"
 
 @interface OxModel : NSObject
 @property (nonatomic) NSInteger age;
 @end
 
+@interface ManModel : NSObject
+@property (nonatomic) NSString *name;
+@end
+
+@implementation ManModel
+
+@end
+
 @interface HoriThirdViewController (){
     NSMutableArray *oxes;
+    NSMutableArray *mans;
 }
 @end
 
@@ -32,6 +42,38 @@
     oxes = [[NSMutableArray alloc] initWithObjects:ox, nil];
     [self oxCountAfterYears:10];
     NSLog(@"count : %ld",oxes.count);
+    mans = [[NSMutableArray alloc] initWithCapacity:0];
+    NSArray *names = @[@"何发松",@"合法",@"高高",@"何发",@"阳春"];
+    for (NSString *str in names) {
+        ManModel *man = [ManModel new];
+        man.name = str;
+        [mans addObject:man];
+    }
+//    [mans sortedArrayUsingComparator:^NSComparisonResult(ManModel *obj1,ManModel *obj2){
+//        NSString *name1 = [ChineseToPinyin pinyinFromChineseString:obj1.name];
+//        NSString *name2 = [ChineseToPinyin pinyinFromChineseString:obj2.name];
+//        NSComparisonResult result = [name1 compare:name2 options:NSCaseInsensitiveSearch];
+//        return result;
+//    }];
+    [self  sortedArry:mans];
+//    NSLog(@"%@",[names sortedArrayUsingComparator:^NSComparisonResult(NSString *str1,NSString *str2){
+//        return [str1 compare:str2];
+//    }]);
+}
+
+- (void)sortedArry:(NSMutableArray *)sender{
+    for (int i = 0; i < sender.count; i++) {
+        for (int j = 1; j < sender.count - 1; j++) {
+            ManModel *obj2 = sender[j];
+            ManModel *obj1 = sender[j - 1];
+            NSString *name1 = [ChineseToPinyin pinyinFromChineseString:obj1.name];
+            NSString *name2 = [ChineseToPinyin pinyinFromChineseString:obj2.name];
+            NSComparisonResult result = [name1 compare:name2 options:NSCaseInsensitiveSearch];
+            if (result == NSOrderedDescending) {
+                [sender exchangeObjectAtIndex:j withObjectAtIndex:j - 1];
+            }
+        }
+    }
 }
 
 - (void)oxCountAfterYears:(NSInteger)years{
